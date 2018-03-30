@@ -50,6 +50,4 @@ adding a port forwarding in Vagrantfile
 launching mailcatcher
 => `mailcatcher --ip=0.0.0.0`
 
-=> mailcatcher -f
-
 More information <https://github.com/sj26/mailcatcher/issues/89>

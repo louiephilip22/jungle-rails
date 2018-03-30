@@ -58,6 +58,3 @@ group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
-
-# Added at 2018-03-30 17:35:16 +0000 by vagrant:
-gem "font-awesome-sass", "~> 5.0"
