@@ -43,12 +43,40 @@ cat1.products.create!({
   price: 64.99
 })
 
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: Faker::Hipster.paragraph(4),
+  rating: 3,
+})
+
+Review.create!({
+  product_id: 1,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(4),
+  rating: 4,
+})
+
 cat1.products.create!({
   name:  'Women\'s Zebra pants',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
   quantity: 18,
   price: 124.99
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(4),
+  rating: 5,
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 1,
+  description: Faker::Hipster.paragraph(4),
+  rating: 2,
 })
 
 cat1.products.create!({
@@ -59,12 +87,40 @@ cat1.products.create!({
   price: 34.49
 })
 
+Review.create!({
+  product_id: 3,
+  user_id: 3,
+  description: Faker::Hipster.paragraph(4),
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 3,
+  user_id: 4,
+  description: Faker::Hipster.paragraph(4),
+  rating: 3,
+})
+
 cat1.products.create!({
   name:  'Hipster Socks',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel4.jpg'),
   quantity: 8,
   price: 25.00
+})
+
+Review.create!({
+  product_id: 4,
+  user_id: 4,
+  description: Faker::Hipster.paragraph(4),
+  rating: 2,
+})
+
+Review.create!({
+  product_id: 4,
+  user_id: 3,
+  description: Faker::Hipster.paragraph(4),
+  rating: 3,
 })
 
 cat1.products.create!({
@@ -75,12 +131,47 @@ cat1.products.create!({
   price: 1_225.00
 })
 
+Review.create!({
+  product_id: 5,
+  user_id: 4,
+  description: Faker::Hipster.paragraph(4),
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 5,
+  user_id: 5,
+  description: Faker::Hipster.paragraph(4),
+  rating: 5,
+})
+
 cat1.products.create!({
   name:  'Human Feet Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
   quantity: 82,
   price: 224.50
+})
+
+Review.create!({
+  product_id: 6,
+  user_id: 4,
+  description: Faker::Hipster.paragraph(4),
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 6,
+  user_id: 5,
+  description: Faker::Hipster.paragraph(4),
+  rating: 5,
+})
+
+Review.create!({
+  product_id: 6,
+  user_id: 1,
+  description: Faker::Hipster.paragraph(4),
+  rating: 3,
 })
 
 
@@ -92,12 +183,33 @@ cat2.products.create!({
   price: 164.49
 })
 
+Review.create!({
+  product_id: 7,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(4),
+  rating: 4,
+})
+
 cat2.products.create!({
   name:  'Hotdog Slicer',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics2.jpg'),
   quantity: 3,
   price: 26.00
+})
+
+Review.create!({
+  product_id: 8,
+  user_id: 3,
+  description: Faker::Hipster.paragraph(4),
+  rating: 1,
+})
+
+Review.create!({
+  product_id: 8,
+  user_id: 2,
+  description: Faker::Hipster.paragraph(4),
+  rating: 2,
 })
 
 cat2.products.create!({
@@ -108,12 +220,33 @@ cat2.products.create!({
   price: 2_026.29
 })
 
+Review.create!({
+  product_id: 9,
+  user_id: 1,
+  description: Faker::Hipster.paragraph(4),
+  rating: 3,
+})
+
 cat3.products.create!({
   name:  'Optimal Sleeping Bed',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture1.jpg'),
   quantity: 320,
   price: 3_052.00
+})
+
+Review.create!({
+  product_id: 10,
+  user_id: 6,
+  description: Faker::Hipster.paragraph(4),
+  rating: 4,
+})
+
+Review.create!({
+  product_id: 10,
+  user_id: 4,
+  description: '',
+  rating: 3,
 })
 
 cat3.products.create!({
@@ -124,6 +257,13 @@ cat3.products.create!({
   price: 987.65
 })
 
+Review.create!({
+  product_id: 11,
+  user_id: 1,
+  description: Faker::Hipster.paragraph(4),
+  rating: 3,
+})
+
 cat3.products.create!({
   name:  'Red Bookshelf',
   description: Faker::Hipster.paragraph(4),
@@ -132,5 +272,11 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+Review.create!({
+  product_id: 12,
+  user_id: 1,
+  description: Faker::Hipster.paragraph(4),
+  rating: 3,
+})
 
 puts "DONE!"
