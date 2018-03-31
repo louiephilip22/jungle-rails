@@ -279,4 +279,11 @@ Review.create!({
   rating: 3,
 })
 
+User.create!({
+  first_name: "Philip",
+  last_name: "Templonuevo",
+  email: "philip@email.com",
+  password_digest: "123456"
+})
+
 puts "DONE!"
