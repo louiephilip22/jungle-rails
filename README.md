@@ -1,7 +1,11 @@
-# Jungle
+# Project Jungle on Rails
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Final Product
+
+![Showing products catalog view](https://github.com/louiephilip22/jungle-rails/blob/826a6cf4e0fcf5d744be0fca96f4940210166760/docs/screenshot.png)
+![Showing product and reviews view](https://github.com/louiephilip22/jungle-rails/blob/826a6cf4e0fcf5d744be0fca96f4940210166760/docs/screenshot2.png)
 
 ## Setup
 
@@ -27,13 +31,13 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * PostgreSQL 9.x
 * Stripe
 
-## OBS
+## Instrutions for email testing
 
-## MailCatcher
+### MailCatcher
 
 MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface.
 
-Bundler
+#### Bundler
 
 Please don't put mailcatcher into your Gemfile. It will conflict with your applications gems at some point.
 
@@ -41,13 +45,13 @@ Instead, pop a note in your README stating you use mailcatcher. Simply run `gem 
 
 More information <https://mailcatcher.me>
 
-AND
+#### And
 
-I confirm that, on a Vagrant Ubuntu VM it works by :
+On a Vagrant Ubuntu VM it works by :
 
 adding a port forwarding in Vagrantfile
-=> `config.vm.network :forwarded_port, guest: 1080, host: 1080`
+=> `config.vm.network :forwarded_port, host: 1080, guest: 1080`
 launching mailcatcher
-=> `mailcatcher --ip=0.0.0.0`
+=> `mailcatcher --ip=0.0.0.0` - remark: Do not set only http with command `mailcatcher --http-ip=0.0.0.0`
 
 More information <https://github.com/sj26/mailcatcher/issues/89>
