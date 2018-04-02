@@ -42,4 +42,34 @@ RSpec.describe User, type: :model do
 
   end
 
+
+  describe '.authenticate_with_credentials' do
+
+    it "authenticates a user with correct credentials" do
+      @user = User.create(first_name: 'Philip', last_name: 'Templonuevo', email: 'philip@email.com', password: 'Philip', password_confirmation: 'Philip')
+      expect(User.authenticate_with_credentials('philip@email.com', 'Philip')).to eq @user
+    end
+
+    it "does not authenticate a user with incorrect credentials" do
+      @user = User.create(first_name: 'Philip', last_name: 'Templonuevo', email: 'philip@email.com', password: 'Philip', password_confirmation: 'Philip')
+      expect(User.authenticate_with_credentials('philip@myemail.com', 'Philip')).to_not eq @user
+    end
+
+    it "authenticates a user with correct credential including spaces before/after the email address" do
+      @user = User.create(first_name: 'Philip', last_name: 'Templonuevo', email: 'philip@email.com', password: 'Philip', password_confirmation: 'Philip')
+      expect(User.authenticate_with_credentials(' philip@email.com', 'Philip')).to eq @user
+    end
+
+    it "authenticates a user with correct credential including spaces after the email address" do
+      @user = User.create(first_name: 'Philip', last_name: 'Templonuevo', email: 'philip@email.com', password: 'Philip', password_confirmation: 'Philip')
+      expect(User.authenticate_with_credentials('philip@email.com ', 'Philip')).to eq @user
+    end
+
+    it "authenticates a user with correct credential and wrong case in the email" do
+      @user = User.create(first_name: 'Philip', last_name: 'Templonuevo', email: 'philip@email.com', password: 'Philip', password_confirmation: 'Philip')
+      expect(User.authenticate_with_credentials('PhiLiP@email.com', 'Philip')).to eq @user
+    end
+
+  end
+
 end
