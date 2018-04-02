@@ -4,8 +4,8 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Final Product
 
-![Showing products catalog view]()
-![Showing product and reviews view]()
+![Showing products catalog view](https://github.com/louiephilip22/jungle-rails/blob/826a6cf4e0fcf5d744be0fca96f4940210166760/docs/screenshot.png)
+![Showing product and reviews view](https://github.com/louiephilip22/jungle-rails/blob/826a6cf4e0fcf5d744be0fca96f4940210166760/docs/screenshot2.png)
 
 ## Setup
 
